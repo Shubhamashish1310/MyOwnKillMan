@@ -1,0 +1,33 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  width="200"
+  height="200"
+>
+  <g stroke="black" stroke-width="3" fill="none">
+    <!-- Head -->
+    <circle cx="100" cy="60" r="40" />
+
+    <!-- Eyes -->
+    <circle cx="85" cy="50" r="5" fill="black" />
+    <circle cx="115" cy="50" r="5" fill="black" />
+
+    <!-- Mouth -->
+    <path d="M 80 80 Q 100 100 120 80" />
+
+    <!-- Tears -->
+    <path d="M 85 55 Q 80 70 85 85" stroke="blue" />
+    <path d="M 115 55 Q 110 70 115 85" stroke="blue" />
+
+    <!-- Body -->
+    <line x1="100" y1="100" x2="100" y2="150" />
+
+    <!-- Arms -->
+    <line x1="100" y1="120" x2="70" y2="100" />
+    <line x1="100" y1="120" x2="130" y2="100" />
+
+    <!-- Legs -->
+    <line x1="100" y1="150" x2="80" y2="180" />
+    <line x1="100" y1="150" x2="120" y2="180" />
+  </g>
+</svg>
