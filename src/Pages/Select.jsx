@@ -1,6 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import Accordion from '../Components/Acordian';
+import bgImage from '../assets/bg.jpg';
+
+
 
 const topicsWithWords = {
   Animal: ["Cat", "Dog", "Elephant", "Tiger", "Lion"],
@@ -15,8 +18,17 @@ function Select() {
   console.log('Topics:', topics);
 
   return (
-    <div className='bg-slate-900 h-screen flex flex-col items-center justify-center'>
+    <div >
+      
+    <div className='bg-cover bg-center h-screen flex flex-col items-center justify-center' style={{backgroundImage: `url('${bgImage}')`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+    
+   
+    
+    
+    
       <Accordion topics={topics} />
+    </div>
+
     </div>
   );
 }

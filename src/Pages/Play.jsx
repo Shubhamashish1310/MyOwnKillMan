@@ -87,7 +87,7 @@ function Play() {
       <button className='bg-gradient-to-r from-red-700 to-red-500 h-16 w-auto  m-2 p-2 text-white font-bold py-2 px-4 rounded-3xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:shadow-red-700/50 '><Link to={"/select"}>Start Again</Link></button>
       <img src={hangmanImages[wrongGuesses]} alt={`Hangman stage ${wrongGuesses}`} className="mt-4" />
       {wrongGuesses >= 8 && renderGameOver()}
-      
+      {hasWon && <Winning wordToGuess={wordToGuess} />}
     </div>
     
   );
