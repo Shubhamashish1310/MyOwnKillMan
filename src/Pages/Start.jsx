@@ -20,8 +20,13 @@ function Start() {
               <Link to="/select" className="text-3xl font-extrabold">Start Game</Link>
             </button>
 
-            
+
       </div>
+
+
+      <footer className="absolute bottom-0 w-full h-16 flex items-center justify-center bg-black">
+        <p className="text-center text-white font-serif">Made with ❤️ by Shubham Ashish</p>
+      </footer>
       </div>
         
           
