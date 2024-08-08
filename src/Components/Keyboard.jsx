@@ -9,7 +9,7 @@ const RenderKeyboard = ({ alphabet, guessedLetters, handleLetterClick, wrongGues
       key={index}
       onClick={() => handleLetterClick(letter)}
       
-      className={`text-3xl h-12 w-12  m-2 p-2 border border-black flex justify-center items-center rounded  ${
+      className={`text-3xl h-9 w-auto  m-1 p-1 border border-black flex justify-center items-center rounded  ${
        `${guessedLetters.includes(letter) ? 'bg-green-700' : hasWon && !wordToGuess.includes(letter) ? 'bg-red-600 line-through ease-linear' : 'bg-cyan-400 hover:bg-cyan-600 border-cyan-200 border-1 '}`
       
      
