@@ -6,10 +6,61 @@ import bgImage from '../assets/bg.jpg';
 
 
 const topicsWithWords = {
-  Animal: ["Cat", "Dog", "Elephant", "Tiger", "Lion"],
-  Space: ["Planet", "Star", "Galaxy", "Meteor", "Comet"],
-  Food: ["Pizza", "Burger", "Pasta", "Sushi", "Salad"],
-  Country: ["India", "Brazil", "France", "Australia", "Japan"],
+  Colors: [
+    "Red", "Green", "Blue", "Yellow", "Purple", "Orange", "Cyan", "Magenta", 
+    "Lime", "Indigo", "Violet", "Pink", "Brown", "Gray", "Black", "White"
+  ],
+
+  Space: [
+    "Planet", "Star", "Galaxy", "Meteor", "Comet", "Asteroid", "Nebula", 
+    "Cosmos", "Orbit", "Satellite", "Supernova"
+  ],
+
+  Bollywood: [
+    "Dangal", "Sholay", "Lagaan", "Kabir Singh", "Padmaavat", "Bahubali", 
+    "Andhadhun", "Kahaani", "PK", "Barfi", "Devdas", "Sanju"
+  ],
+
+  Country: [
+    "India", "Brazil", "France", "Australia", "Japan", "Germany", "Italy", 
+    "Canada", "China", "Russia", "Egypt", "Mexico", "Spain", "Thailand"
+  ],
+
+  MarvelMovies: [
+    "Spiderman", "Hulk", "Thor", "Black Panther", "Iron Man", "Avengers", 
+    "Guardians", "Ant Man", "Loki", "Thanos", "Wolverine", "Deadpool"
+  ],
+
+  ProgrammingLanguage: [
+    "Java", "JavaScript", "Python", "Swift", "Kotlin", "Ruby",
+     "Rust", "Perl"
+  ],
+
+  Fruits: [
+    "Apple", "Banana", "Orange", "Strawberry", "Watermelon", "Pineapple", 
+    "Mango", "Blueberry", "Kiwi", "Peach", "Papaya", "Coconut"
+  ],
+
+  Animals: [
+    "Elephant", "Giraffe", "Kangaroo", "Dolphin", "Panda", "Penguin", 
+    "Cheetah", "Rhinoceros", "Chimpanzee", "Koala", "Squirrel", "Hippopotamus"
+  ],
+
+  MusicalInstruments: [
+    "Guitar", "Piano", "Violin", "Drum", "Flute", "Saxophone", 
+    "Trumpet", "Harmonica", "Accordion"
+  ],
+
+
+  Sports: [
+    "Soccer", "Cricket", "Basketball", "Tennis", "Baseball", 
+    "Volleyball", "Golf", "Hockey", "Swimming", "Rugby", "Badminton"
+  ],
+
+  TechnologyBrands: [
+    "Apple", "Samsung", "Microsoft", "Google", "Sony", "Intel", 
+    "Huawei", "Amazon", "Facebook", "Tesla",  "Nokia"
+  ]
 };
 
 const topics = Object.keys(topicsWithWords);

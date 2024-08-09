@@ -4,11 +4,63 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const topicsWithWords = {
-  Animal: ["Cat", "Dog", "Elephant", "Tiger", "Lion"],
-  Space: ["Planet", "Star", "Galaxy", "Meteor", "Comet"],
-  Food: ["Pizza", "Burger", "Pasta", "Sushi", "Salad"],
-  Country: ["India", "Brazil", "France", "Australia", "Japan"],
+  Colors: [
+    "Red", "Green", "Blue", "Yellow", "Purple", "Orange", "Cyan", "Magenta", 
+    "Lime", "Indigo", "Violet", "Pink", "Brown", "Gray", "Black", "White"
+  ],
+
+  Space: [
+    "Planet", "Star", "Galaxy", "Meteor", "Comet", "Asteroid", "Nebula", 
+    "Cosmos", "Orbit", "Satellite", "Supernova"
+  ],
+
+  Bollywood: [
+    "Dangal", "Sholay", "Lagaan", "Kabir Singh", "Padmaavat", "Bahubali", 
+    "Andhadhun", "Kahaani", "PK", "Barfi", "Devdas", "Sanju"
+  ],
+
+  Country: [
+    "India", "Brazil", "France", "Australia", "Japan", "Germany", "Italy", 
+    "Canada", "China", "Russia", "Egypt", "Mexico", "Spain", "Thailand"
+  ],
+
+  MarvelMovies: [
+    "Spiderman", "Hulk", "Thor", "Black Panther", "Iron Man", "Avengers", 
+    "Guardians", "Ant Man", "Loki", "Thanos", "Wolverine", "Deadpool"
+  ],
+
+  ProgrammingLanguage: [
+    "Java", "JavaScript", "Python", "Swift", "Kotlin", "Ruby",
+     "Rust", "Perl"
+  ],
+
+  Fruits: [
+    "Apple", "Banana", "Orange", "Strawberry", "Watermelon", "Pineapple", 
+    "Mango", "Blueberry", "Kiwi", "Peach", "Papaya", "Coconut"
+  ],
+
+  Animals: [
+    "Elephant", "Giraffe", "Kangaroo", "Dolphin", "Panda", "Penguin", 
+    "Cheetah", "Rhinoceros", "Chimpanzee", "Koala", "Squirrel", "Hippopotamus"
+  ],
+
+  MusicalInstruments: [
+    "Guitar", "Piano", "Violin", "Drum", "Flute", "Saxophone", 
+    "Trumpet", "Harmonica", "Accordion"
+  ],
+
+
+  Sports: [
+    "Soccer", "Cricket", "Basketball", "Tennis", "Baseball", 
+    "Volleyball", "Golf", "Hockey", "Swimming", "Rugby", "Badminton"
+  ],
+
+  TechnologyBrands: [
+    "Apple", "Samsung", "Microsoft", "Google", "Sony", "Intel", 
+    "Huawei", "Amazon", "Facebook", "Tesla",  "Nokia"
+  ]
 };
+
 
 function Accordion({ topics }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,30 +78,26 @@ function Accordion({ topics }) {
   };
 
   return (
-    <div className="flex flex-col bg-gradient-to-r from-red-700 to-black text-white rounded-xl p-4 space-y-4 w-full text-center shadow-lg shadow-blue-500/50 hover:shadow-lg hover:shadow-purple-900/50">
+    <div className="border-red-500 border flex flex-col bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-xl p-6 space-y-4 w-full max-w-lg mx-auto shadow-lg shadow-blue-500/50 hover:shadow-lg hover:shadow-purple-900/50">
       <h2
-        className="text-5xl font-bold font-serif cursor-pointer text-neutral-200 hover:text-neutral-300 shadow-lg shadow-purple-400/50 bg-gradient-to-r from-black to-blue-600 p-2 rounded-t-lg"
+        className="text-4xl md:text-5xl font-bold font-serif text-center cursor-pointer text-neutral-200 hover:text-neutral-300 bg-gradient-to-r from-black to-blue-900 p-4 rounded-t-lg"
         onClick={() => setIsOpen(!isOpen)}
       >
         Topics
       </h2>
       {isOpen && (
-        <div className="space-y-2 flex flex-col">
-          <hr className="border-gray-900 h-1 bg-gray-900" />
-          <div className="flex flex-col gap-4">
-            {topics.map((topic, index) => (
-              <div
-                key={index}
-                className="border border-slate-950 rounded-xl mx-auto transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 cursor-pointer"
-                onClick={() => handleTopicClick(topic)}
-              >
-                <div className="bg-gradient-to-r from-cyan-200 to-white bg-clip-text hover:bg-clip-text text-transparent p-4 rounded-xl">
-                  <dt className="text-4xl font-bold">{topic}</dt>
-                  <div className="h-1 bg-gradient-to-r from-green-500 to-yellow-500 bg-clip-text text-transparent w-1/4 mt-2"></div>
-                </div>
+        <div className="space-y-4 flex flex-col max-h-96 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900">
+          {topics.map((topic, index) => (
+            <div
+              key={index}
+              className="border border-gray-700 rounded-xl mx-auto transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 cursor-pointer bg-gradient-to-r from-gray-700 to-gray-800"
+              onClick={() => handleTopicClick(topic)}
+            >
+              <div className="p-4 rounded-xl text-2xl md:text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-red-400">
+                {topic}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       )}
     </div>
