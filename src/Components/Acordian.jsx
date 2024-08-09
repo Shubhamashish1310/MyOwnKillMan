@@ -15,7 +15,7 @@ const topicsWithWords = {
   ],
 
   Bollywood: [
-    "Dangal", "Sholay", "Lagaan", "Kabir Singh", "Padmaavat", "Bahubali", 
+    "Dangal", "Sholay", "Lagaan", "KabirSingh", "Padmaavat", "Bahubali", 
     "Andhadhun", "Kahaani", "PK", "Barfi", "Devdas", "Sanju"
   ],
 
@@ -25,8 +25,8 @@ const topicsWithWords = {
   ],
 
   MarvelMovies: [
-    "Spiderman", "Hulk", "Thor", "Black Panther", "Iron Man", "Avengers", 
-    "Guardians", "Ant Man", "Loki", "Thanos", "Wolverine", "Deadpool"
+    "Spiderman", "Hulk", "Thor", "BlackPanther", "IronMan", "Avengers", 
+    "Guardians", "AntMan", "Loki", "Thanos", "Wolverine", "Deadpool"
   ],
 
   ProgrammingLanguage: [
