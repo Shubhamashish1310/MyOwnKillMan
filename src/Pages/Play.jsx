@@ -42,6 +42,9 @@ function Play() {
       }
     } else {
       setWrongGuesses(wrongGuesses + 1);
+      if (wrongGuesses >= 8) {
+        setHasWon(false);
+      }
     }
   };
 
