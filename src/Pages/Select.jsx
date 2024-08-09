@@ -27,8 +27,8 @@ const topicsWithWords = {
   ],
 
   MarvelMovies: [
-    "Spiderman", "Hulk", "Thor", "Black Panther", "IronMan", "Avengers", 
-    "Guardians", "Ant Man", "Loki", "Thanos", "Wolverine", "Deadpool"
+    "Spiderman", "Hulk", "Thor", "BlackPanther", "IronMan", "Avengers", 
+    "Guardians", "AntMan", "Loki", "Thanos", "Wolverine", "Deadpool"
   ],
 
   ProgrammingLanguage: [
