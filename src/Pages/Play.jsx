@@ -26,7 +26,7 @@ function Play() {
 
   const handleLetterClick = (letter) => {
     if (hasWon || wrongGuesses >= 8) return;
-
+    
     if (guessedLetters.includes(letter)) return;
 
     if (wordToGuess.toUpperCase().includes(letter)) {
@@ -53,10 +53,10 @@ function Play() {
       <span
         key={index}
         className={`text-3xl sm:text-3xl md:text-5xl font-mono font-semibold tracking-widest transition-all duration-300 ${
-          guessedLetters.includes(letter.toUpperCase()) ? 'text-blue-200' : 'text-gray-500'
+          guessedLetters.includes(letter.toUpperCase()) ? 'text-green-600' : 'text-gray-500'
         }`}
       >
-        {guessedLetters.includes(letter.toUpperCase()) ? letter : '_ '}
+        {guessedLetters.includes(letter.toUpperCase()) ? letter : ' _ '}
       </span>
     ));
   };
@@ -71,11 +71,11 @@ function Play() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-gray-900 via-black to-gray-900 h-screen flex flex-col items-center justify-center text-white p-6">
+    <div className="bg-gradient-to-r from-slate-900 via-black to-slate-900 h-screen flex flex-col items-center justify-center text-white p-6">
       <div className="max-w-3xl w-full flex flex-col items-center space-y-6 bg-gray-800 bg-opacity-75 p-6 rounded-lg shadow-lg">
         <h1 className="text-2xl sm:text-3xl text-red-400 mb-2 text-center">Hint: {selectedTopic.toUpperCase()}</h1>
         <h2 className="text-3xl sm:text-3xl font-bold mb-4 text-center">Guess the word:</h2>
-        <div className="mb-4 flex justify-center space-x-2">{renderWord()}</div>
+        <div className="mb-2 flex justify-center space-x-2">{renderWord()}</div>
         <img
           src={hangmanImages[wrongGuesses]}
           alt={`Hangman stage ${wrongGuesses}`}
