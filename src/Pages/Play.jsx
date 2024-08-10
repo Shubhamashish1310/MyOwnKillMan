@@ -6,14 +6,14 @@ import hangman2 from '../assets/3.svg';
 import hangman3 from '../assets/4.svg';
 import hangman4 from '../assets/5.svg';
 import hangman5 from '../assets/6.svg';
+
 import hangman6 from '../assets/7.svg';
-import hangman7 from '../assets/8.svg';
 import gameover from '../assets/react.svg';
 import RenderKeyboard from '../Components/Keyboard';
 import Winning from '../Components/Winning';
 
 const hangmanImages = [
-  hangman0, hangman1, hangman2, hangman3, hangman4, hangman5, hangman6, hangman7, gameover,
+  hangman0, hangman1, hangman2, hangman3, hangman4, hangman5, hangman6, gameover,
 ];
 
 function Play() {
@@ -25,7 +25,7 @@ function Play() {
   const [hasWon, setHasWon] = useState(false);
 
   const handleLetterClick = (letter) => {
-    if (hasWon || wrongGuesses >= 8) return;
+    if (hasWon || wrongGuesses >= 7) return;
     
     if (guessedLetters.includes(letter)) return;
 
@@ -42,7 +42,7 @@ function Play() {
       }
     } else {
       setWrongGuesses(wrongGuesses + 1);
-      if (wrongGuesses >= 8) {
+      if (wrongGuesses >= 7) {
         setHasWon(false);
       }
     }
@@ -93,7 +93,7 @@ function Play() {
         </div>
         
         <div className="mb-4 text-xl font-semibold">
-          Wrong guesses: <span className="text-red-500">{wrongGuesses}</span>/8
+          Wrong guesses: <span className="text-red-500">{wrongGuesses}</span>/7
         </div>
         <Link to="/select">
             <button className="bg-gradient-to-r from-red-600 to-red-400 py-3 px-8 text-white font-bold text-2xl rounded-full transition transform hover:scale-105 hover:shadow-lg">
@@ -101,7 +101,7 @@ function Play() {
             </button>
           </Link>
         <div className="flex flex-col items-center space-y-2">
-          {wrongGuesses >= 8 && renderGameOver()}
+          {wrongGuesses >= 7 && renderGameOver()}
           {hasWon && <Winning wordToGuess={wordToGuess} />}
           
         </div>

@@ -16,7 +16,7 @@ const RenderKeyboard = ({ alphabet, guessedLetters, handleLetterClick, wrongGues
       }`}
       
       
-      disabled={guessedLetters.includes(letter) || wrongGuesses >= 8 || guessedLetters.includes(letter.toUpperCase())}
+      disabled={guessedLetters.includes(letter) || wrongGuesses >= 7 || guessedLetters.includes(letter.toUpperCase())}
     >
       {letter}
 
