@@ -73,13 +73,13 @@ function Play() {
   return (
     <div className="bg-gradient-to-r from-slate-900 via-black to-slate-900 h-screen flex flex-col items-center justify-center text-white p-6">
       <div className="max-w-3xl w-full flex flex-col items-center space-y-6 bg-gray-800 bg-opacity-75 p-6 rounded-lg shadow-lg">
-        <h1 className="text-2xl sm:text-3xl text-red-400 mb-2 text-center">Hint: {selectedTopic.toUpperCase()}</h1>
+        <h1 className="text-2xl sm:text-3xl text-red-400 mb-0 text-center">Hint: {selectedTopic.toUpperCase()}</h1>
         <h2 className="text-3xl sm:text-3xl font-bold mb-4 text-center">Guess the word:</h2>
         <div className="mb-2 flex justify-center space-x-2">{renderWord()}</div>
         <img
           src={hangmanImages[wrongGuesses]}
           alt={`Hangman stage ${wrongGuesses}`}
-          className="mb-4 w-32 sm:w-72 md:w-72 lg:w-72"
+          className="lg:max-w-72"
         />
         <div className="flex flex-wrap justify-center mb-4 w-full">
           <RenderKeyboard
