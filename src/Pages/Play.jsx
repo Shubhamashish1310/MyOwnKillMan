@@ -79,7 +79,7 @@ function Play() {
         <img
           src={hangmanImages[wrongGuesses]}
           alt={`Hangman stage ${wrongGuesses}`}
-          className="lg:max-w-72"
+          className="mb-4 w-32 sm:w-72 md:w-72 lg:w-72"
         />
         <div className="flex flex-wrap justify-center mb-4 w-full">
           <RenderKeyboard
