@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import hangman0 from '../assets/1.svg';
-import hangman1 from '../assets/2.svg';
-import hangman2 from '../assets/3.svg';
-import hangman3 from '../assets/4.svg';
-import hangman4 from '../assets/5.svg';
-import hangman5 from '../assets/6.svg';
+import hangman0 from '../assets/1.png';
+import hangman1 from '../assets/2.png';
+import hangman2 from '../assets/3.png';
+import hangman3 from '../assets/4.png';
+import hangman4 from '../assets/5.png';
+import hangman5 from '../assets/6.png';
 
-import hangman6 from '../assets/7.svg';
-import gameover from '../assets/react.svg';
+import hangman6 from '../assets/7.png';
+import gameover from '../assets/8.png';
 import RenderKeyboard from '../Components/Keyboard';
 import Winning from '../Components/Winning';
 
@@ -72,7 +72,7 @@ function Play() {
 
   return (
     <div className="bg-gradient-to-r from-slate-900 via-black to-slate-900 h-screen flex flex-col items-center justify-center text-white p-6">
-      <div className="max-w-3xl w-full flex flex-col items-center space-y-6 bg-gray-800 bg-opacity-75 p-6 rounded-lg shadow-lg">
+      <div className="max-w-3xl w-full flex flex-col items-center space-y-6 bg-gradient-to-r from-black via-black to-black bg-opacity-50 p-6 rounded-lg shadow-lg">
         <h1 className="text-2xl sm:text-3xl text-red-400 mb-0 text-center">Hint: {selectedTopic.toUpperCase()}</h1>
         <h2 className="text-3xl sm:text-3xl font-bold mb-4 text-center">Guess the word:</h2>
         <div className="mb-2 flex justify-center space-x-2">{renderWord()}</div>
